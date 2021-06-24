@@ -1,15 +1,30 @@
 body {
-    background-color: black;
+    background-image: url('Imagens/Background.jpg');
+    background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
     color: aqua;
-    margin: 30px 25% 30px 30px;
+    text-align: center;
+    overflow-x: hidden;
+}
+.try{
+    position: fixed;
 }
 h2{
     text-align: justify;
+    margin-left: 30px;
 }
-p{
+p, ol, ul{
     font-family: cursive;
     text-align: justify;
+}
+.Characters{
+    margin: 30px 30% 30px 30px;
+}
+.geralt, .yennefer{
+    display: inline-flex;
+}
+picture figcaption{
+    font-family: cursive;
 }
 footer {
     font-size: small;
@@ -25,4 +40,12 @@ a{
 a:hover{
     color: cornflowerblue;
     font-size: 110%;
+}
+.geralt img{
+    width: 249px;
+    height: 375px;
+}
+.yennefer img{
+    height: 372px;
+    width: 300px;
 }
