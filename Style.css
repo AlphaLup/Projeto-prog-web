@@ -6,9 +6,6 @@ body {
     text-align: center;
     overflow-x: hidden;
 }
-.try{
-    position: fixed;
-}
 h2{
     text-align: justify;
     margin-left: 30px;
@@ -17,18 +14,27 @@ p, ol, ul{
     font-family: cursive;
     text-align: justify;
 }
-.Characters{
-    margin: 30px 30% 30px 30px;
+ul{
+    list-style-type: square;
 }
-.geralt, .yennefer{
+ol, ul{
+    background-color: rgba(0, 0, 0, 0.281);
+}
+.Characters{
+    margin: 30px 50px 30px 30px;
+    padding: 40px 50px 40px 40px;
+    background-color: rgba(0, 0, 0, 0.800);
+}
+.geralt, .yennefer, .triss{
     display: inline-flex;
 }
 picture figcaption{
     font-family: cursive;
+    text-align: center;
 }
 footer {
     font-size: small;
-    position:absolute;
+    position: relative;
     bottom:0;
     width:100%;
 }
@@ -48,4 +54,8 @@ a:hover{
 .yennefer img{
     height: 372px;
     width: 300px;
+}
+.triss img{
+    width: 300px;
+    height: 425px;
 }
