@@ -4,14 +4,20 @@
         <meta charset="UTF-8">
         <title>Breno Amâncio Affonso</title>
         <link rel="stylesheet" href="Style.css">
+        
     </head>
 
     <body>
         <picture>
             <img src="Imagens/TheWitcherLogo.jpg" alt="Logo The Witcher">
         </picture>
-        <h1>The Witcher 3: Wild Hunt</h1>
-        
+        <h1 id="titulo" >The Witcher 3: Wild Hunt</h1>
+
+        <div>
+            <button onclick="plusSize()">+</button>
+            <button onclick="lessSize()">-</button>
+        </div>
+
         <nav>
             <a href="#LinkInterno">Home</a>
             <a href="Personagens.html">Personagens</a>
@@ -59,5 +65,14 @@
         <footer>
             Todos os direitos são reservados.
         </footer>
+
+        <script>
+            function plusSize() {
+                document.getElementById('titulo').style.fontSize = "500%";
+            }
+            function lessSize() {
+                document.getElementById("titulo").style.fontSize = "100%";
+            }
+        </script>
     </body>
 </html>
