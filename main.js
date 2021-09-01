@@ -11,12 +11,22 @@ function botoes() {
     document.body.prepend(div);
 }
 
+let tamanho = 2;
+
+function refresh() {
+    const primeiroh1 = document.querySelector("h1");
+    primeiroh1.style.fontSize = `${tamanho}em`;
+}
+
 function plusSize() {
-    document.getElementById('titulo').style.fontSize = "500%";
+    tamanho += 0.25;
+    refresh();
 }
 
 function lessSize() {
-    document.getElementById("titulo").style.fontSize = "100%";
+    if (tamanho > 0)
+        tamanho -= 0.25;
+        refresh();
 }
 
 function normalSize() {
