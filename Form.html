@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="FormStyle.css">
+</head>
+<body>
+    <div class="menu">
+        <picture>
+            <img src="Imagens/TheWitcherLogo.jpg" alt="Logo The Witcher">
+        </picture>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Personagens.html">Personagens</a>
+            <a href="https://witcher.fandom.com/wiki/The_Witcher_3:_Wild_Hunt">Wiki</a>
+            <a href="Form.html">Nos ajude</a>
+        </nav>
+    </div>
+    
+    <div class="text">
+        <h1>Sobre você</h1>
+        <h2>Complete com suas preferências ou informações</h2>
+    </div>
+
+    <form action="">
+        <fieldset class="space">
+            <div>
+                <label for="Name" class="text">Nome</label>
+                <input type="text" name="nome">
+                <label for="nickname" class="text">Sobrenome</label>
+                <input type="text" name="nickname">
+            </div>
+            
+            <div>
+                <label for="age" class="text">Idade</label>
+                <input type="number" name="idade">
+            </div>
+        </fieldset>
+
+        <fieldset class="space">
+            <div>
+                <label for="reason" class="text">Motivo de visita: </label>
+                <br>
+                <input class="boxes" type="checkbox" name="reason1" value="Curiosidade">
+                <label for="reason1" class="subtext">Curiosidade</label>
+                <br>
+                <input class="boxes" type="checkbox" name="reason2" value="Lore">
+                <label for="reason2" class="subtext">Para conhecer mais a história</label>
+                <br>
+                <input class="boxes" type="checkbox" name="reason3" value="basic">
+                <label for="reason3" class="subtext">Para saber o básico e conversar sobre</label>
+                <br>
+                <input class="boxes" type="checkbox" name="OtherReason" value="Other">
+                <label for="Other" class="subtext">Outro</label>
+                <textarea name="Other" id="Other" cols="30" rows="1">Qual?</textarea>
+            </div>
+        </fieldset>
+
+        <fieldset class="space">
+            <label for="help" class="text">Ajudou com seu objetivo?</label>
+            <br>
+            <label for="help" class="subtext">
+                <input class="boxes" type="radio" name="help" value="sim">Sim
+            </label>
+            <label for="help" class="subtext">
+                <input class="boxes" type="radio" name="help" value="não">Não
+            </label>
+        </fieldset>
+
+        <fieldset class="space">
+            <label for="content" class="text">Faltou algum personagem? </label>
+            <textarea name="content" id="content" cols="30" rows="2">Escreva aqui</textarea>
+        </fieldset>
+
+        <div class="submit">
+            <button type="submit">Enviar</button>
+        </div>
+        
+    </form>
+
+    <footer>
+        Todos os direitos são reservados.
+    </footer>
+</body>
+</html>
