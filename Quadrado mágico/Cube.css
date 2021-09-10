@@ -28,10 +28,6 @@ input {
     border-color: orange;
 }
 
-/* .foradoslimites, .numerosrepetidos{
-    border-color: red;
-} */
-
 .foradoslimites input,
 .numerosrepetidos input {
     color: red;
@@ -42,7 +38,3 @@ input {
     color: green;
     border: 3px solid;
 }
-
-/* .vitoria {
-    border-color: green;
-} */

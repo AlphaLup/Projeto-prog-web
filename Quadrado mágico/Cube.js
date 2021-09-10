@@ -1,13 +1,50 @@
-const ordem = 3;
-const matriz = Array(ordem);
+var ordem = 3;
+var matriz = Array(ordem);
 for (let i=0; i<matriz.length; i++) {
     matriz[i] = Array(ordem);
 }
-const somaNumeros = 15;
+var somaNumeros = 15;
 
 document.addEventListener('DOMContentLoaded', () => {
+    escolhertamanho();
     insereTabela();
 });
+
+function escolhertamanho(){
+    const div = document.createElement('div')
+    div.innerHTML=`
+        <button onclick="createTable(3)">3x3</button>
+        <button onclick="createTable(4)">4x4</button>
+        <button onclick="createTable(5)">5x5</button>
+    `
+    document.body.append(div)
+}
+
+function createTable(value) {
+    if(value == 3){
+        ordem = 3;
+        somaNumeros = 15;
+
+    } else if(value == 4){
+        ordem = 4;
+        somaNumeros = 34;
+
+    } else if(value == 5){
+        ordem = 5;
+        somaNumeros = 65;
+    }
+
+    matriz = Array(ordem);
+    for (let i=0; i<matriz.length; i++) {
+        matriz[i] = Array(ordem);
+    }
+
+    if(document.getElementById("quadradomagico")){
+        document.getElementById("quadradomagico").remove();
+    }
+
+    insereTabela();
+}
 
 function insereTabela() {
     const tabela = document.createElement('table');
@@ -40,6 +77,7 @@ function insereInput(celula) {
         const quadradoCompleto = verificaMatriz();
         if (quadradoCompleto) {
             document.querySelector('#quadradomagico').classList.add('vitoria');
+            ganhajogo();
         } else {
             document.querySelector('#quadradomagico').classList.remove('vitoria');
         }
@@ -203,4 +241,20 @@ function atribuiClasseCelula(classe, i, j) {
 function removeClasseCelula(classe, i, j) {
     const celula = document.querySelector(`#lin${i}col${j}`);
     celula.classList.remove(classe);
+}
+
+function ganhajogo () {
+    const div = document.createElement('div')
+    div.innerHTML=`
+        <h2>Parabéns, você concluiu o desafio do Quadrado Mágico</h2>
+        <button onclick="atualiza()">Reiniciar</button>
+    `
+    document.body.append(div);
+    document.querySelectorAll('input').forEach(input => {
+        input.readOnly = true;
+    })
+}
+
+function atualiza() {
+    document.location.reload(true);
 }
